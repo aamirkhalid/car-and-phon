@@ -261,9 +261,25 @@ padding-top: 40px;
   max-width: 320px;
   background:white;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ 
 }
-
+.imger{
+ position: relative;
+} 
+.fixx-mod{
+  background: red;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top:-36px;
+  left: 0;
+  padding: 6px 25px;
+  border-radius: 5px;
+} 
+.fixx-mod:hover{
+  background: black;
+ 
+}
 .home-hdtr{
   font-size: 40px;
   color: #010718;
