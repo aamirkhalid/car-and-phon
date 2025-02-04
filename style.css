@@ -73,6 +73,14 @@
           background: #010718;
           padding: 10px 15px;
           margin-right: 10px;
+         } 
+         .login{
+          text-decoration: none;
+          font-size: 16px; 
+          padding-right: 15px;
+          color: #010718; 
+          padding-top: 10px;
+         text-align: center;
          }
     /* Full-screen background image */
     .background-image {
@@ -206,7 +214,15 @@ padding-bottom: 20px;
   text-transform: capitalize;
   padding: 10px; 
   font-weight: 700;
-} 
+}  
+.plat-cs{
+  font-size: 18px; 
+  color: #464444;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px; 
+  font-weight: 700;
+}
 .cat-ime{
   width: 140px;
 } 
@@ -219,6 +235,81 @@ padding-bottom: 20px;
   max-width: 180px; 
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  
+}
+
+.palet-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:white;
+  max-width:240px; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.row.gap-3.pt-4.pb-4.ustifyrt- {
+  display: flex;
+  justify-content: center;
+}
+.all-vihle{
+ display: flex;
+ justify-content: space-around;
+padding-top: 40px;
+
+}
+
+.crt-well{
+  max-width: 320px;
+  background:white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.home-hdtr{
+  font-size: 40px;
+  color: #010718;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: capitalize; 
+  padding-bottom: 20px;
+  } 
+
+.home-truste{
+  color: #D01818;
+  font-size: 16px; 
+  font-weight: 800; 
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 1px;
+} 
+
+.car-mine{
+  color: #D01818;
+  font-size: 16px; 
+  font-weight: 400;
+
+}
+.car-heed{
+  color: #D01818;
+  font-size: 18px; 
+  font-weight:600;
+}
+.car-det{
+  font-size: 20px;
+  color: #1c1d1f;
+  font-weight: 600;
+} 
+.detls{
+  display: flex;
+  justify-content: space-between;
+padding: 10px 5px;
+} 
+.trime{
+  color: #37383a;
+  font-size: 14px;
+} 
+.light{
+  font-size: 15px;
+  color: #010718;
 }
     @media (max-width: 996px){
       .saml-ds{
