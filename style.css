@@ -17,7 +17,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      overflow-x: hidden; 
+      overflow-x: hidden;  
+      background:#f9fafd ;
     } 
     .saml-ds{
       background: white;
@@ -46,6 +47,10 @@
     padding-right: 3%; 
     color: white;
   }    /* Fixed navbar */
+
+  .logo-top{
+    max-width: 120px;
+  }
       .navbar {
         position: fixed;
               background: rgba(255, 255, 255, 0.9);
@@ -163,10 +168,7 @@
       color: #a5a1a1;
     }
  /* fillter home */
- .main-sc{
-  background: rgb(235, 250, 241);
- 
- }
+
 .fillter-home{
   background: white;
   padding: 0 5%;
@@ -478,19 +480,22 @@ left: -5px;
       } 
       .navbar{
         top: 0px;
-      }
+      } 
+      .navbar-collapse{
+        background: white;
+       padding: 20px;
+  }  
+  .regster {
+    font-size: 14px;
+  } 
+  .login{
+    font-size: 14px;
+  }
     } 
 
     @media (max-width: 576px){
 
-    .navbar-collapse{
-      background: white;
-      padding:10px ;
-      margin-top: 32px; 
-      width: 80%;
-      margin-left: 5%;
-      margin-right: 4%;
-} 
+   
     }
 
     .redtr{
@@ -502,4 +507,10 @@ left: -5px;
       background: #141313; 
       padding-top: 20px;
     } 
-   
+   .kmas{
+    overflow-x: hidden;
+   }
+   .spce{
+    
+    justify-content: center !important;
+   }
