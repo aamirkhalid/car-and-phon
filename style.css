@@ -233,10 +233,25 @@ padding-bottom: 20px;
   justify-content: center;
   background:white;
   max-width: 180px; 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  position: relative;
  
+} 
+.yaer-sow{
+  position: absolute;
+  background: #D01818;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 5px 13px;
+  top: 0px; 
+  left: 0; 
+  border-radius: 10px 0px;
 }
+.yaer-sow:hover{
+  background: #010718;
 
+}
 .palet-card{
   display: flex;
   flex-direction: column;
@@ -258,7 +273,7 @@ padding-top: 40px;
 }
 
 .crt-well{
-  max-width: 320px;
+  max-width: 340px;
   background:white;
   border-radius: 15px;
  
@@ -326,7 +341,135 @@ padding: 10px 5px;
 .light{
   font-size: 15px;
   color: #010718;
+} 
+.phon-prime {
+  background: white;
+  display: flex;
+  align-items: center; 
+  padding: 30px 5px; 
+  max-width: 98%; 
+  margin: 0 1%; 
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  
+} 
+.numer-had{
+  font-size: 24px;
+  font-weight: bold;
+  color: #D01818;
+  letter-spacing: 1px;
+}  
+
+.add-prime{
+  position: relative;
+} 
+.remim{
+  position: absolute; 
+  background: #111010;
+  color: white;
+  padding: 5px 10px ;
+  font-size: 14px; 
+left: -5px; 
+  top: -30px;
+} 
+.remim:hover{
+  background: #D01818;
+} 
+
+
+.numer-prime {
+  background: #FFDD15;
+  display: flex;
+  align-items: center; 
+  max-width: 98%; 
+  margin: 0 1%; 
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+ 
+} 
+.numer-blochi{
+  background: #3509f8;
+  display: flex;
+  align-items: center; 
+  max-width: 98%; 
+  margin: 0 1%; 
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
+.nm-price{
+  font-size: 18px;
+  background: #010718;
+  color: white;
+  padding: 5px 15px; 
+  margin-top: 20px;
+} 
+
+
+.numr-plyt{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  background: #0427f1; 
+  padding-top: 10px;
+} 
+
+.numr-balc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  background: #f7030f; 
+  padding-top: 10px;
+} 
+.panjab{
+  max-width: 60px;
+ margin-left: 5px;
+} 
+.sireil{
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+  text-align: center;
+} 
+.wechil-ny{
+  font-size: 48px; 
+  font-weight: bolder;
+  letter-spacing: 3px;
+  padding-left: 10px;
+  
+} 
+.kiop{
+  color: white;
+}
+.prib-op{
+  position: relative;
+} 
+.pric-show{
+  position: absolute;
+  background: #d3b404;
+  color: rgb(44, 43, 43);
+  right: 0;
+  bottom:-20px;
+  padding: 5px 10px;
+  font-size: 14px;
+} 
+.fotter-link{
+  color: white ; 
+  text-decoration: none;
+  font-size: 16px;
+}
+ .logo-bt{
+  max-width: 120px;
+ } 
+ .footer-dec{
+  font-size: 16px;
+  color: white;
+ } 
+ .copy-text{
+  color: white;
+ }
     @media (max-width: 996px){
       .saml-ds{
         display: none; 
@@ -349,3 +492,14 @@ padding: 10px 5px;
       margin-right: 4%;
 } 
     }
+
+    .redtr{
+     background: rgb(62, 49, 243);
+     color: white;
+    }
+
+    .bg-listing{
+      background: #141313; 
+      padding-top: 20px;
+    } 
+   
