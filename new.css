@@ -356,6 +356,12 @@ body {
 .number-plate:hover .number-plate-price {
     animation: swing 0.8s ease-in-out;
 }
+.license-plate {
+    border: 3px solid lightgray;
+    background-color: lightgray;
+    border-radius: 8px;
+    padding: 1px 2px;
+}
 
 .font-30p {
     font-size: 30px;
