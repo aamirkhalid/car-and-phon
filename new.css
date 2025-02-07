@@ -176,10 +176,6 @@ body {
 
 /* main cs */
 
-.vehicle-cat {
-    display: flex;
-}
-
 .cat-start {
     display: flex;
     justify-content: center;
