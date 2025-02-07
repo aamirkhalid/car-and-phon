@@ -192,19 +192,12 @@
             </div>
             <div
                 class="row card-section-main"
-                x-data="{getColor:(code)=>{
-                    switch(code%3) {
-                        case 0: return '#25a9cf';
-                        case 1: return '#78a22f';
-                        case 2: return '#ed1737';
-                    }
-                    return 'red';
-            }}">
-                <template x-for="i in 6" :key="i">
-                    <a class="col-6 col-md-4 my-4">
+                x-data="{getColor:(code)=> ['#25a9cf', '#78a22f', '#ed1737', 'black',][code % 4]}">
+                <template x-for="i in 8" :key="i">
+                    <a class="col-6 col-md-3 my-4">
                         <div class="license-plate" :style="{ color: getColor(i) }">
                             <div class="license-plate-logo">
-                                <img :src="`images/phones/${(i%3)+1}.png`" alt="Logo" class="img-fluid" />
+                                <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
                             </div>
                             <div class="license-plate-content">
                                 <div class="font-30p">123</div>
