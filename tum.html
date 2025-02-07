@@ -195,16 +195,52 @@
                 x-data="{getColor:(code)=> ['#25a9cf', '#78a22f', '#ed1737', 'black',][code % 4]}">
                 <template x-for="i in 8" :key="i">
                     <a class="col-6 col-md-3 my-4">
-                        <div class="license-plate" :style="{ color: getColor(i) }">
-                            <div class="license-plate-logo">
+                        <div class="number-plate px-2" :style="{ color: getColor(i) }">
+                            <div class="number-plate-logo">
                                 <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
                             </div>
-                            <div class="license-plate-content">
+                            <div class="number-plate-content">
                                 <div class="font-30p">123</div>
                                 <div class="font-30p">9876543</div>
                             </div>
-                            <div class="license-plate-price">AED 5,000</div>
-                            <div class="license-plate-featured badge">Featured</div>
+                            <div class="number-plate-price">AED 5,000</div>
+                            <div class="number-plate-featured badge">Featured</div>
+                        </div>
+                    </a>
+                </template>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-12 cat-start">
+                    <h5 class="find-sub">What kind of plate do you need?</h5>
+                    <h1 class="find-had">Available Number plate</h1>
+                </div>
+            </div>
+            <div class="row card-section-main">
+                <template x-for="i in 8" :key="i">
+                    <a class="col-6 col-md-3 my-4">
+                        <div
+                            style="
+                                border: 3px solid lightgray;
+                                background-color: lightgray;
+                                border-radius: 8px;
+                                padding: 1px 2px;
+                            ">
+                            <div class="number-plate justify-content-around text-body">
+                                <div class="number-plate-content">
+                                    <div class="font-30p">S</div>
+                                </div>
+                                <div class="number-plate-logo">
+                                    <img :src="`images/cities/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
+                                </div>
+                                <div class="number-plate-content">
+                                    <div class="font-30p">11X00</div>
+                                </div>
+                                <div class="number-plate-price">AED 5,000</div>
+                                <div class="number-plate-featured badge">Featured</div>
+                            </div>
                         </div>
                     </a>
                 </template>

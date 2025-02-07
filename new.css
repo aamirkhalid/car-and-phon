@@ -286,26 +286,25 @@ body {
     gap: 10px;
 }
 
-.license-plate {
+.number-plate {
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
-    padding: 0 10px;
     border: 4px solid #000;
-    border-radius: 8px;
+    border-radius: 12px;
     background: white;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
-.license-plate-logo {
+.number-plate-logo {
     width: 60px;
-    height: 60px;
+    /* height: 60px; */
     object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.license-plate-content {
+.number-plate-content {
     padding: 5px 10px;
     display: flex;
     align-items: center;
@@ -313,7 +312,7 @@ body {
     font-weight: bold;
 }
 
-.license-plate-price {
+.number-plate-price {
     position: absolute;
     bottom: -20px;
     right: 5px;
@@ -327,7 +326,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.license-plate-featured {
+.number-plate-featured {
     position: absolute;
     top: -20px;
     left: 0;
@@ -354,7 +353,7 @@ body {
 }
 
 /* Apply swing effect on hover */
-.license-plate:hover .license-plate-price {
+.number-plate:hover .number-plate-price {
     animation: swing 0.8s ease-in-out;
 }
 
