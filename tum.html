@@ -15,11 +15,71 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script src="js/dev.js"></script>
         <!-- Custom CSS -->
         <link rel="stylesheet" href="new.css" />
     </head>
     <body x-data>
-        <include src="header"></include>
+        <div class="container-fluid saml-ds overflow-x-hidden">
+            <div class="row">
+                <div class="col-12 top-on-nave">
+                    <div class="cotcat-top">
+                        <i class="bi bi-whatsapp"></i>
+                        <p class="whtsoo">0300-1234563</p>
+                    </div>
+                    <div class="social-top">
+                        <i class="bi bi-facebook px-2"></i>
+                        <i class="bi bi-twitter px-2"></i>
+                        <i class="bi bi-tiktok px-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fixed Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo on the left -->
+                <img src="logo.png" class="img-fluid logo-top" alt="MemorableTots Logo" />
+                <a class="navbar-brand" href="#"></a>
+                <!-- Toggle button for mobile -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links in the center -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a class="login" href="#">Login</a>
+                        <a class="regster me-2" href="#">Register</a>
+                    </div>
+                </div>
+                <!-- Register/Login buttons on the right -->
+            </div>
+        </nav>
 
         <div class="container-fluid overflow-x-hidden">
             <div class="row background-image">
@@ -72,43 +132,47 @@
                     <h5 class="find-sub">Trusted Car DeAler Service</h5>
                     <h1 class="find-had">Explore all Vehicles</h1>
                 </div>
-                <template x-for="i in 4" :key="i">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-                        <div class="crt-well">
+                <template x-for="car in 4" :key="car">
+                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                        <a class="crt-well d-block overflow-hidden" href="#">
                             <div class="imger">
-                                <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
-                                <span class="fixx-mod">2324</span>
+                                <img :src="`images/cars/${car}.jpeg`" class="img-fluid price-car" alt="" />
+                                <span class="fixx-mod badge">2324</span>
                             </div>
-                            <div class="pric-hading pt-5 px-2">
-                                <h3 class="car-mine-title">Mini Cooper 3 Similar</h3>
-                                <h4 class="car-det">Chevrolet Suburban 2024 mo</h4>
+                            <div class="pric-hading p-2">
+                                <h3 class="car-mine-title text-truncate">Mini Cooper 3 Similar</h3>
+                                <h4 class="car-det text-truncate">Chevrolet Suburban 2024 mo</h4>
 
                                 <div class="type">
                                     <p class="trime">
-                                        Petrol
                                         <i class="bi bi-fuel-pump-diesel"></i>
-                                    </p>
-
-                                    <p class="trime">
-                                        7500 KM
-                                        <i class="bi bi-fuel-pump-diesel"></i>
+                                        <span>Petrol</span>
                                     </p>
                                     <p class="trime">
-                                        Auto
+                                        <i class="bi bi-speedometer2"></i>
+                                        <span>7500 KM</span>
+                                    </p>
+                                    <p class="trime">
                                         <i class="bi bi-car-front"></i>
+                                        <span>Auto</span>
                                     </p>
                                 </div>
-                                <h6 class="car-heed">Lakh 80,00000</h6>
+                                <h6 class="car-heed">AED 80,000</h6>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </template>
             </div>
         </div>
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <!-- Bootstrap 5 JS (Optional, for dropdowns, modals, etc.) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/dev.js"></script>
     </body>
 </html>
 
