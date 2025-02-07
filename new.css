@@ -6,6 +6,9 @@
     --top-br: #ef1923;
     --wiper: #4d4747;
 }
+a {
+    text-decoration: none;
+}
 .kmas {
     overflow-x: hidden;
 }
