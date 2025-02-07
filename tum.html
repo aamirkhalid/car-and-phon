@@ -49,142 +49,60 @@
             </div>
         </div>
         <div class="container">
-            <div class="row vehicle-cat pt-4">
+            <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <h5 class="find-sub">Find your car by car brand</h5>
                     <h1 class="find-had">Browse by Brands</h1>
                 </div>
-
-                <div class="row card-section-main">
-                    <template x-for="i in 6">
-                        <div class="col-2 cat-card">
-                            <img src="brand.png" class="img-fluid cat-ime" alt="" />
+            </div>
+            <div class="row card-section-main">
+                <template x-for="i in 6" :key="i">
+                    <div class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
+                        <div class="cat-card h-100 bg-white rounded-1">
+                            <img :src="`images/brands/${i}.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km">Acura</h6>
                         </div>
-                    </template>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row all-vihle">
+                <div class="col-12 cat-start">
+                    <h5 class="find-sub">Trusted Car DeAler Service</h5>
+                    <h1 class="find-had">Explore all Vehicles</h1>
                 </div>
-
-                <div class="row all-vihle">
-                    <div class="col-12 cat-start">
-                        <h5 class="find-sub">Trusted Car DeAler Service</h5>
-                        <h1 class="find-had">Explore all Vehicles</h1>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 crt-well px-0">
-                        <div class="imger">
-                            <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
-                            <span class="fixx-mod">2324</span>
-                        </div>
-                        <div class="pric-hading pt-5 px-2">
-                            <h3 class="car-mine-title">Mini Cooper 3 Similar</h3>
-                            <h4 class="car-det">Chevrolet Suburban 2024 mo</h4>
-
-                            <div class="type">
-                                <p class="trime">
-                                    Petrol
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-
-                                <p class="trime">
-                                    7500 KM
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-                                <p class="trime">
-                                    Auto
-                                    <i class="bi bi-car-front"></i>
-                                </p>
+                <template x-for="i in 4" :key="i">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                        <div class="crt-well">
+                            <div class="imger">
+                                <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
+                                <span class="fixx-mod">2324</span>
                             </div>
-                            <h6 class="car-heed">Lakh 80,00000</h6>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 crt-well px-0">
-                        <div class="imger">
-                            <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
-                            <span class="fixx-mod">2324</span>
-                        </div>
-                        <div class="pric-hading pt-5">
-                            <span class="pri-name d-flex gap-4">
-                                <h3 class="car-mine-title px-2">Mini Cooper</h3>
+                            <div class="pric-hading pt-5 px-2">
+                                <h3 class="car-mine-title">Mini Cooper 3 Similar</h3>
+                                <h4 class="car-det">Chevrolet Suburban 2024 mo</h4>
+
+                                <div class="type">
+                                    <p class="trime">
+                                        Petrol
+                                        <i class="bi bi-fuel-pump-diesel"></i>
+                                    </p>
+
+                                    <p class="trime">
+                                        7500 KM
+                                        <i class="bi bi-fuel-pump-diesel"></i>
+                                    </p>
+                                    <p class="trime">
+                                        Auto
+                                        <i class="bi bi-car-front"></i>
+                                    </p>
+                                </div>
                                 <h6 class="car-heed">Lakh 80,00000</h6>
-                            </span>
-                            <h4 class="car-det">Chevrolet Suburban 2024 mo</h4>
-
-                            <div class="type">
-                                <p class="trime">
-                                    Petrol
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-
-                                <p class="trime">
-                                    7500 KM
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-                                <p class="trime">
-                                    Auto
-                                    <i class="bi bi-car-front"></i>
-                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 crt-well px-0">
-                        <div class="imger">
-                            <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
-                            <span class="fixx-mod">2324</span>
-                        </div>
-                        <div class="pric-hading pt-5">
-                            <span class="pri-name d-flex gap-4">
-                                <h3 class="car-mine-title px-2">Mini Cooper</h3>
-                                <h6 class="car-heed px-2">Lakh 80,00000</h6>
-                            </span>
-                            <h4 class="car-det px-2">Chevrolet Suburban 2024 mo</h4>
-
-                            <div class="type">
-                                <p class="trime px-2">
-                                    Petrol
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-
-                                <p class="trime px-2">
-                                    7500 KM
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-                                <p class="trime px-2">
-                                    Auto
-                                    <i class="bi bi-car-front"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 crt-well px-0">
-                        <div class="imger">
-                            <img src="carii0.jpeg" class="img-fluid price-car" alt="" />
-                            <span class="fixx-mod px-2">2324</span>
-                        </div>
-                        <div class="pric-hading pt-5 px-2">
-                            <span class="pri-name d-flex gap-4">
-                                <h3 class="car-mine-title px-2">Mini Cooper</h3>
-                                <h6 class="car-heed px-2">Lakh 80,00000</h6>
-                            </span>
-                            <h4 class="car-det px-2">Chevrolet Suburban 2024 mo</h4>
-
-                            <div class="type">
-                                <p class="trime">
-                                    Petrol
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-
-                                <p class="trime">
-                                    7500 KM
-                                    <i class="bi bi-fuel-pump-diesel"></i>
-                                </p>
-                                <p class="trime">
-                                    Auto
-                                    <i class="bi bi-car-front"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </template>
             </div>
         </div>
 
