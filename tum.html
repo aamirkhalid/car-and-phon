@@ -183,6 +183,41 @@
             </div>
         </div>
 
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-12 cat-start">
+                    <h5 class="find-sub">Find your Phone Number All networks</h5>
+                    <h1 class="find-had">Browse Phone Number</h1>
+                </div>
+            </div>
+            <div
+                class="row card-section-main"
+                x-data="{getColor:(code)=>{
+                    switch(code%3) {
+                        case 0: return '#25a9cf';
+                        case 1: return '#78a22f';
+                        case 2: return '#ed1737';
+                    }
+                    return 'red';
+            }}">
+                <template x-for="i in 6" :key="i">
+                    <a class="col-6 col-md-4 my-4">
+                        <div class="license-plate" :style="{ color: getColor(i) }">
+                            <div class="license-plate-logo">
+                                <img :src="`images/phones/${(i%3)+1}.png`" alt="Logo" class="img-fluid" />
+                            </div>
+                            <div class="license-plate-content">
+                                <div class="font-30p">123</div>
+                                <div class="font-30p">9876543</div>
+                            </div>
+                            <div class="license-plate-price">AED 5,000</div>
+                            <div class="license-plate-featured badge">Featured</div>
+                        </div>
+                    </a>
+                </template>
+            </div>
+        </div>
+
         <br />
         <br />
         <br />
