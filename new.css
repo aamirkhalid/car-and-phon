@@ -493,6 +493,10 @@ body {
     font-size: 100px;
 }
 
+.max-w-60p {
+    max-width: 40px;
+}
+
 /* mobile responsive */
 @media (max-width: 996px) {
     .navbar > .container,

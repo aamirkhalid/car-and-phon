@@ -186,11 +186,14 @@
                                 <a class="col-12 col-md-6 col-lg-4 my-4">
                                     <div class="number-plate px-2">
                                         <div class="number-plate-logo">
-                                            <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
+                                            <img
+                                                :src="`images/phones/${(i%4)+1}.png`"
+                                                alt="Logo"
+                                                class="img-fluid max-w-60p" />
                                         </div>
                                         <div class="number-plate-content">
-                                            <div class="font-30p">123</div>
-                                            <div class="font-30p">9876543</div>
+                                            <div class="font-24p">123</div>
+                                            <div class="font-24p">9876543</div>
                                         </div>
                                         <div class="number-plate-price">AED 5,000</div>
                                         <div class="number-plate-featured badge" x-show="i < 20">Featured</div>
