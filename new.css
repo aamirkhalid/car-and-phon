@@ -458,7 +458,29 @@ body {
     top: 140px;
 }
 
+.thumbnail {
+    cursor: pointer;
+    transition: border 0.3s;
+}
+.thumbnail.active {
+    border: 2px solid blue;
+}
+
+.car-detail-icon {
+    border: 2px solid lightgray;
+    padding: 8px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Utility class keep them at the end of other code and before @media */
+.font-20p {
+    font-size: 20px;
+}
 .font-24p {
     font-size: 24px;
 }

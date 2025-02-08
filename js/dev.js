@@ -10,3 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function gallery() {
+    return {
+        images: [
+            '/images/cars/1.webp',
+            '/images/cars/2.webp',
+            '/images/cars/3.webp',
+            '/images/cars/1.jpeg',
+            '/images/cars/2.jpeg',
+            '/images/cars/3.jpeg',
+            '/images/cars/4.jpeg',
+            '/images/cars/6.jpeg',
+        ],
+        currentImage: '/images/cars/1.jpeg',
+        setCurrent(image) {
+            this.currentImage = image;
+        },
+    };
+}
+
