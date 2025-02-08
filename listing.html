@@ -14,6 +14,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <!-- Custom CSS -->
         <link rel="stylesheet" href="new.css" />
     </head>
@@ -122,6 +123,230 @@
                 </div>
             </div>
         </div>
+
+        <div class="container pt-5">
+            <!-- Mobile Filter Button (visible only on mobile) -->
+            <div class="container my-3">
+                <div class="row">
+                    <div class="offset-md-6 col-12 col-md-6 d-flex align-items-center justify-content-between">
+                        <div class="d-md-none">
+                            <label for="filter" class="form-label d-block">Filter</label>
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileFilters"
+                                aria-controls="mobileFilters">
+                                Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="container mb-5">
+                <div class="row">
+                    <!-- Desktop Filters Column (hidden on mobile) -->
+                    <div class="col-md-3 d-none d-md-block">
+                        <div class="sticky-filter">
+                            <form>
+                                <div class="py-3 border-bottom border-2">
+                                    <div class="mb-3">
+                                        <label for="sortSelect" class="form-label">
+                                            Sort
+                                            <i class="bi bi-sort-down"></i>
+                                        </label>
+                                        <select id="sortSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="py-3">
+                                    <h5>
+                                        Filters
+                                        <i class="bi bi-funnel"></i>
+                                    </h5>
+                                    <div class="mb-3">
+                                        <label for="filterSelect" class="form-label">Select Emirate</label>
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="filterSelect" class="form-label">Select code</label>
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="filterInput" class="form-label">Enter number</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="filterInput"
+                                            placeholder="Enter value" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Select Digits</label>
+                                        <input
+                                            type="range"
+                                            class="form-range text-warning"
+                                            value="1"
+                                            min="1"
+                                            max="5"
+                                            step="1"
+                                            id="customRange3" />
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Apply</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Items Section -->
+                    <div class="col-md-9">
+                        <div class="px-3 py-5">
+                            <h1 class="listing-filter-heading">
+                                Number plates for sale in Dubai / Number plates for sale in Abu Dhabi
+                            </h1>
+                        </div>
+
+                        <div class="row card-section-main">
+                            <template x-for="i in 60" :key="i">
+                                <a class="col-12 col-md-6 col-lg-4 my-4">
+                                    <div class="license-plate">
+                                        <div class="number-plate justify-content-around text-body">
+                                            <div class="number-plate-content">
+                                                <div class="font-30p">S</div>
+                                            </div>
+                                            <div class="number-plate-logo">
+                                                <img
+                                                    :src="`images/cities/${(i%4)+1}.png`"
+                                                    alt="Logo"
+                                                    class="img-fluid" />
+                                            </div>
+                                            <div class="number-plate-content">
+                                                <div class="font-30p">11X00</div>
+                                            </div>
+                                            <div class="number-plate-price">AED 5,000</div>
+                                            <div class="number-plate-featured badge">Featured</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offcanvas Slide-Over for Mobile Filters -->
+            <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="mobileFilters"
+                aria-labelledby="mobileFiltersLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="mobileFilterSelect" class="form-label">Select</label>
+                            <select id="mobileFilterSelect" class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobileFilterInput" class="form-label">Input</label>
+                            <input type="text" class="form-control" id="mobileFilterInput" placeholder="Enter value" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-listing text-center text-lg-start pt-9 mt-5">
+            <!-- Grid container -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4">
+                        <img src="logo.png" class="img-fluid logo-bt" alt="MemorableTots Logo" />
+
+                        <p class="footer-dec">
+                            Discover your next vehicle effortlessly on {name website}! Browse our verified listings
+                            featuring cars, bikes, and more, complete with owner phone numbers and number plates for
+                            quick connections. Whether you’re buying, selling, or just exploring, find reliable vehicles
+                            and transparent details all in one place.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase mb-0 text-white">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="fotter-link">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase text-white">What We Offer</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="fotter-link">Verified Vehicle Listings</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Direct Contact Information</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Number Plate Verification</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">phon Number Verification</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center text-white p-3">
+                © 2025 Copyright:
+                <a class="fotter-link" href="">listing.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
 
         <!-- Bootstrap 5 JS (Optional, for dropdowns, modals, etc.) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
