@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail Page - Image Gallery</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Alpine.js -->
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <style>
+            .thumbnail {
+                cursor: pointer;
+                transition: border 0.3s;
+            }
+            .thumbnail.active {
+                border: 2px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container my-5" x-data="gallery()">
+            <!-- Big Image -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <img :src="currentImage" class="img-fluid rounded w-100" alt="Main Image" />
+                </div>
+            </div>
+            <!-- Thumbnails -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap gap-2">
+                        <template x-for="(image, index) in images" :key="index">
+                            <img
+                                :src="image"
+                                class="img-thumbnail thumbnail"
+                                :class="{ 'active': currentImage === image }"
+                                alt="Thumbnail"
+                                style="width: 100px; height: 100px; object-fit: cover"
+                                @click="setCurrent(image)" />
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function gallery() {
+                return {
+                    images: [
+                        '/images/cars/1.jpeg',
+                        '/images/cars/2.jpeg',
+                        '/images/cars/3.jpeg',
+                        '/images/cars/4.jpeg',
+                        '/images/cars/1.jpeg',
+                        '/images/cars/2.jpeg',
+                        '/images/cars/3.jpeg',
+                        '/images/cars/4.jpeg',
+                        '/images/cars/1.jpeg',
+                        '/images/cars/2.jpeg',
+                        '/images/cars/3.jpeg',
+                        '/images/cars/4.jpeg',
+                        '/images/cars/1.jpeg',
+                        '/images/cars/2.jpeg',
+                        '/images/cars/3.jpeg',
+                        '/images/cars/4.jpeg',
+                    ],
+                    currentImage: '/images/cars/1.jpeg',
+                    setCurrent(image) {
+                        this.currentImage = image;
+                    },
+                };
+            }
+        </script>
+
+        <!-- Bootstrap JS (optional, for any Bootstrap components) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
