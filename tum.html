@@ -117,8 +117,8 @@
             <div class="row card-section-main">
                 <template x-for="i in 6" :key="i">
                     <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
-                        <div class="cat-card h-100 bg-white rounded-1">
-                            <img :src="`images/brands/${i}.png`" class="img-fluid cat-ime" alt="" />
+                        <div class="cat-card gap-4 pt-5 h-100 bg-white rounded-1">
+                            <img :src="`images/brands/${(i%2)+1}.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km">Ford</h6>
                         </div>
                     </a>
@@ -172,10 +172,10 @@
                 </div>
             </div>
             <div class="row card-section-main">
-                <template x-for="i in 4" :key="i">
-                    <a class="col-6 col-md-3 my-2">
+                <template x-for="i in 6" :key="i">
+                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
                         <div class="cat-card p-2 h-100 bg-white rounded-1 mx-auto">
-                            <img :src="`images/phones/${i}.png`" class="img-fluid cat-ime" alt="" />
+                            <img :src="`images/phones/1.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km pt-3">Virgin</h6>
                         </div>
                     </a>
@@ -195,7 +195,7 @@
                 x-data="{getColor:(code)=> ['#25a9cf', '#78a22f', '#ed1737', 'black',][code % 4]}">
                 <template x-for="i in 8" :key="i">
                     <a class="col-6 col-md-3 my-4">
-                        <div class="number-plate px-2" :style="{ color: getColor(i) }">
+                        <div class="number-plate px-2">
                             <div class="number-plate-logo">
                                 <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
                             </div>
