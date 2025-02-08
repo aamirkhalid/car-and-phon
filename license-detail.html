@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vehicle Listings - MemorableTots</title>
+        <!-- Bootstrap 5 CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="new.css" />
+    </head>
+    <body x-data>
+        <div class="container-fluid saml-ds overflow-x-hidden">
+            <div class="row">
+                <div class="col-12 top-on-nave">
+                    <div class="cotcat-top">
+                        <i class="bi bi-whatsapp"></i>
+                        <p class="whtsoo">0300-1234563</p>
+                    </div>
+                    <div class="social-top">
+                        <i class="bi bi-facebook px-2"></i>
+                        <i class="bi bi-twitter px-2"></i>
+                        <i class="bi bi-tiktok px-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fixed Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo on the left -->
+                <img src="logo.png" class="img-fluid logo-top" alt="MemorableTots Logo" />
+                <a class="navbar-brand" href="#"></a>
+                <!-- Toggle button for mobile -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links in the center -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a class="login" href="#">Login</a>
+                        <a class="regster me-2" href="#">Register</a>
+                    </div>
+                </div>
+                <!-- Register/Login buttons on the right -->
+            </div>
+        </nav>
+
+        <div class="container" style="padding-top: 150px">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">License Plate</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dubai</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    <div>
+                        <h1 class="py-3">SPECIAL NUMBER PLATES FOR SALE</h1>
+                    </div>
+                    <div>
+                        <h2 class="py-1 text-danger">Dubai</h2>
+                    </div>
+                    <div>
+                        <h3 class="py-3">AED 69,000</h3>
+                    </div>
+                    <div class="license-plate">
+                        <div class="number-plate justify-content-around text-body">
+                            <div class="number-plate-content">
+                                <div class="font-100p">S</div>
+                            </div>
+                            <div class="number-plate-logo number-plate-logo-big">
+                                <img src="images/cities/1.png" alt="Logo" class="img-fluid" />
+                            </div>
+                            <div class="number-plate-content gap-4">
+                                <div class="font-100p">11X00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="py-5">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste dignissimos ratione ut! Vel
+                        voluptatem, dignissimos tenetur assumenda ipsa fugiat deleniti. Culpa aut quaerat fugiat, velit
+                        vitae in autem, molestiae omnis voluptates amet facere aperiam nostrum illum possimus soluta,
+                        deleniti sequi accusantium veritatis beatae error! Perferendis repudiandae quisquam quibusdam
+                        ipsam? Molestias magni quam porro voluptates exercitationem laudantium natus accusantium animi
+                    </p>
+                    <div class="container">
+                        <div class="col-12 text-center">
+                            <h1 class="find-had">Similar Numbers</h1>
+                        </div>
+                    </div>
+                    <div class="row card-section-main">
+                        <template x-for="i in 2" :key="i">
+                            <a class="col-12 my-4">
+                                <div class="license-plate">
+                                    <div class="number-plate justify-content-around text-body">
+                                        <div class="number-plate-content">
+                                            <div class="font-100p">S</div>
+                                        </div>
+                                        <div class="number-plate-logo number-plate-logo-big">
+                                            <img src="images/cities/1.png" alt="Logo" class="img-fluid" />
+                                        </div>
+                                        <div class="number-plate-content gap-4">
+                                            <div class="font-100p">11X00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </template>
+                    </div>
+                </div>
+                <div class="col-4 px-4">
+                    <div
+                        class="px-3 py-4 d-flex gap-3 flex-column justify-content-between align-items-center rounded-2"
+                        style="background: #d8d8d8">
+                        <div class="number-plate-logo number-plate-logo-big">
+                            <img src="images/user-logo.png" alt="Logo" class="img-fluid" />
+                        </div>
+                        <div class="fw-bold">2020 Special Number Trading</div>
+                        <p class="text-center">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            2020 Special Number TradingSheikh Khalifa Bin Zayed Rd - Dubai
+                        </p>
+
+                        <div class="d-flex flex-column gap-3 py-3">
+                            <div class="font-24p">Contact Through Number</div>
+                            <div class="bg-danger rounded-2 text-white p-3 font-30p d-flex gap-3">
+                                <i class="bi bi-telephone-inbound"></i>
+                                <span class="">1234 45345 43</span>
+                            </div>
+                            <hr />
+                            <div class="font-24p">Contact Through Whatsapp</div>
+                            <div class="bg-danger rounded-2 text-white p-3 font-30p d-flex gap-3">
+                                <i class="bi bi-whatsapp"></i>
+                                <span class="">1234 45345 43</span>
+                            </div>
+                            <hr />
+                            <div class="font-24p">Contact Through Email</div>
+                            <div class="bg-danger rounded-2 text-white p-3 font-30p d-flex gap-3">
+                                <i class="bi bi-envelope-at"></i>
+                                <span class="">fsfsdrwt@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-listing text-center text-lg-start pt-9 mt-5">
+            <!-- Grid container -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4">
+                        <img src="logo.png" class="img-fluid logo-bt" alt="MemorableTots Logo" />
+
+                        <p class="footer-dec">
+                            Discover your next vehicle effortlessly on {name website}! Browse our verified listings
+                            featuring cars, bikes, and more, complete with owner phone numbers and number plates for
+                            quick connections. Whether you’re buying, selling, or just exploring, find reliable vehicles
+                            and transparent details all in one place.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase mb-0 text-white">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="fotter-link">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase text-white">What We Offer</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="fotter-link">Verified Vehicle Listings</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Direct Contact Information</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Number Plate Verification</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">phon Number Verification</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center text-white p-3">
+                © 2025 Copyright:
+                <a class="fotter-link" href="">listing.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+        <!-- Bootstrap 5 JS (Optional, for dropdowns, modals, etc.) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
