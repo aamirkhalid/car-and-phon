@@ -110,13 +110,13 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">Find your car by car brand</h5>
+                    <a class="find-sub" href="/car-listing.html">Find your car by car brand</a>
                     <h1 class="find-had">Browse by Brands</h1>
                 </div>
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 6" :key="i">
-                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
+                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2" href="/car-listing.html">
                         <div class="cat-card gap-4 pt-5 h-100 bg-white rounded-1">
                             <img :src="`images/brands/${(i%2)+1}.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km">Ford</h6>
@@ -128,12 +128,12 @@
         <div class="container">
             <div class="row all-vihle">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">Trusted Car DeAler Service</h5>
+                    <a class="find-sub" href="/car-listing.html">Trusted Car DeAler Service</a>
                     <h1 class="find-had">Explore all Vehicles</h1>
                 </div>
                 <template x-for="car in 4" :key="car">
                     <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-                        <a class="crt-well d-block overflow-hidden" href="#">
+                        <a class="crt-well d-block overflow-hidden" href="/car-detail.html">
                             <div class="imger">
                                 <img :src="`images/cars/${car}.jpeg`" class="img-fluid price-car" alt="" />
                                 <span class="fixx-mod badge">2324</span>
@@ -167,13 +167,13 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">Find your Phone Number All networks</h5>
+                    <a class="find-sub" href="/number-listing.html">Find your Phone Number All networks</a>
                     <h1 class="find-had">Browse Phone Number</h1>
                 </div>
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 6" :key="i">
-                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
+                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2" href="/number-listing.html">
                         <div class="cat-card p-2 h-100 bg-white rounded-1 mx-auto">
                             <img :src="`images/phones/1.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km pt-3">Virgin</h6>
@@ -186,7 +186,7 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">Find your Phone Number All networks</h5>
+                    <a class="find-sub" href="number-listing.html">Find your Phone Number All networks</a>
                     <h1 class="find-had">Browse Phone Number</h1>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                 class="row card-section-main"
                 x-data="{getColor:(code)=> ['#25a9cf', '#78a22f', '#ed1737', 'black',][code % 4]}">
                 <template x-for="i in 8" :key="i">
-                    <a class="col-6 col-md-3 my-4">
+                    <a class="col-6 col-md-3 my-4" href="/number-detail.html">
                         <div class="number-plate px-2">
                             <div class="number-plate-logo">
                                 <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
@@ -214,13 +214,13 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">Find your Phone Number All networks</h5>
-                    <h1 class="find-had">Browse Phone Number</h1>
+                    <a class="find-sub" href="/listing.html">Find your License Plate All</a>
+                    <h1 class="find-had">Browse License Plate</h1>
                 </div>
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 6" :key="i">
-                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2">
+                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2" href="/listing.html">
                         <div class="cat-card p-2 h-100 bg-white rounded-1 mx-auto">
                             <img :src="`images/states/1.jpg`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km pt-3">Dubai</h6>
@@ -233,13 +233,13 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
-                    <h5 class="find-sub">What kind of plate do you need?</h5>
-                    <h1 class="find-had">Available Number plate</h1>
+                    <a class="find-sub" href="/listing.html">What kind of plate do you need?</a>
+                    <h1 class="find-had">Available License plate</h1>
                 </div>
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 8" :key="i">
-                    <a class="col-6 col-md-3 my-4">
+                    <a class="col-6 col-md-3 my-4" href="/license-detail.html">
                         <div class="license-plate">
                             <div class="number-plate justify-content-around text-body">
                                 <div class="number-plate-content">
