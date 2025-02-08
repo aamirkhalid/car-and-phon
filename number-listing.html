@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vehicle Listings - MemorableTots</title>
+        <!-- Bootstrap 5 CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="new.css" />
+    </head>
+    <body x-data>
+        <div class="container-fluid saml-ds overflow-x-hidden">
+            <div class="row">
+                <div class="col-12 top-on-nave">
+                    <div class="cotcat-top">
+                        <i class="bi bi-whatsapp"></i>
+                        <p class="whtsoo">0300-1234563</p>
+                    </div>
+                    <div class="social-top">
+                        <i class="bi bi-facebook px-2"></i>
+                        <i class="bi bi-twitter px-2"></i>
+                        <i class="bi bi-tiktok px-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fixed Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo on the left -->
+                <img src="logo.png" class="img-fluid logo-top" alt="MemorableTots Logo" />
+                <a class="navbar-brand" href="#"></a>
+                <!-- Toggle button for mobile -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links in the center -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a class="login" href="#">Login</a>
+                        <a class="regster me-2" href="#">Register</a>
+                    </div>
+                </div>
+                <!-- Register/Login buttons on the right -->
+            </div>
+        </nav>
+
+        <div class="container-fluid p-0 m-0 overflow-x-hidden">
+            <div class="listing-bg number-listing-bg">
+                <div class="row px-3">
+                    <!-- Full-screen background image with content -->
+
+                    <!-- Left side: Heading, subheading, and description -->
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 left-content listing-hero">
+                        <h1 class="hading listing-heading">
+                            Discover UAE's Finest Pre-
+                            <span class="on-weel">Owned Vehicles.</span>
+                        </h1>
+                        <p class="listin-pag-to p-3">We're Dedicated to Fulfilling Your Every Automotive Desire</p>
+                    </div>
+                    <!-- Right side: Centered card -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-5">
+            <!-- Mobile Filter Button (visible only on mobile) -->
+            <div class="container my-3">
+                <div class="row">
+                    <div class="offset-md-6 col-12 col-md-6 d-flex align-items-center justify-content-between">
+                        <div class="d-md-none">
+                            <label for="filter" class="form-label d-block">Filter</label>
+                            <button
+                                class="btn btn-primary"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileFilters"
+                                aria-controls="mobileFilters">
+                                Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="container mb-5">
+                <div class="row">
+                    <!-- Desktop Filters Column (hidden on mobile) -->
+                    <div class="col-md-3 d-none d-md-block">
+                        <div class="sticky-filter">
+                            <form>
+                                <div class="py-3 border-bottom border-2">
+                                    <div class="mb-3">
+                                        <label for="sortSelect" class="form-label">
+                                            Sort
+                                            <i class="bi bi-sort-down"></i>
+                                        </label>
+                                        <select id="sortSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="py-3">
+                                    <h5>
+                                        Filters
+                                        <i class="bi bi-funnel"></i>
+                                    </h5>
+                                    <div class="mb-3">
+                                        <label for="filterSelect" class="form-label">Select Operator</label>
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="filterSelect" class="form-label">Select code</label>
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="filterInput" class="form-label">Enter number</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="filterInput"
+                                            placeholder="Enter value" />
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Apply</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Items Section -->
+                    <div class="col-md-9">
+                        <div class="px-3 py-5">
+                            <h1 class="listing-filter-heading">
+                                Number plates for sale in Dubai / Number plates for sale in Abu Dhabi
+                            </h1>
+                        </div>
+
+                        <div class="row card-section-main">
+                            <template x-for="i in 60" :key="i">
+                                <a class="col-12 col-md-6 col-lg-4 my-4">
+                                    <div class="number-plate px-2">
+                                        <div class="number-plate-logo">
+                                            <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid" />
+                                        </div>
+                                        <div class="number-plate-content">
+                                            <div class="font-30p">123</div>
+                                            <div class="font-30p">9876543</div>
+                                        </div>
+                                        <div class="number-plate-price">AED 5,000</div>
+                                        <div class="number-plate-featured badge" x-show="i < 20">Featured</div>
+                                    </div>
+                                </a>
+                            </template>
+                        </div>
+
+                        <nav aria-label="Page navigation example" class="py-4">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link text-danger" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link text-danger" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+
+                        <template x-for="i in 10" :key="i">
+                            <div class="py-3">
+                                <h3>Individualization in Connectivity</h3>
+                                <p>
+                                    For some people, having a unique mobile number has more meaning than just being
+                                    functional. It's a tool of personal expression and a way to stand out in a sea of
+                                    people. Your unique mobile number becomes a conversation starter and a symbol of
+                                    your distinctive identity in a city that appreciates individuality when you share it
+                                    with friends, family, and strangers.
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offcanvas Slide-Over for Mobile Filters -->
+            <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="mobileFilters"
+                aria-labelledby="mobileFiltersLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="mobileFilterSelect" class="form-label">Select</label>
+                            <select id="mobileFilterSelect" class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobileFilterInput" class="form-label">Input</label>
+                            <input type="text" class="form-control" id="mobileFilterInput" placeholder="Enter value" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-listing text-center text-lg-start pt-9 mt-5">
+            <!-- Grid container -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 px-4">
+                        <img src="logo.png" class="img-fluid logo-bt" alt="MemorableTots Logo" />
+
+                        <p class="footer-dec">
+                            Discover your next vehicle effortlessly on {name website}! Browse our verified listings
+                            featuring cars, bikes, and more, complete with owner phone numbers and number plates for
+                            quick connections. Whether you’re buying, selling, or just exploring, find reliable vehicles
+                            and transparent details all in one place.
+                        </p>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase mb-0 text-white">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="fotter-link">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                        <h5 class="text-uppercase text-white">What We Offer</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="fotter-link">Verified Vehicle Listings</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Direct Contact Information</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">Number Plate Verification</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="fotter-link">phon Number Verification</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center text-white p-3">
+                © 2025 Copyright:
+                <a class="fotter-link" href="">listing.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+        <!-- Bootstrap 5 JS (Optional, for dropdowns, modals, etc.) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+

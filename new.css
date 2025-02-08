@@ -393,8 +393,17 @@ body {
 .listing-hero {
     padding-top: 80px;
 }
-.listing-bg {
+.number-listing-bg {
+    background-image: url('network.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.car-listing-bg {
     background-image: url('listing.png'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.license-listing-bg {
+    background-image: url('number-plate.webp'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.listing-bg {
     background-size: cover;
     background-position: center;
     height: 95vh;
