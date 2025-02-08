@@ -5,6 +5,7 @@
     --antick: #4483ce;
     --top-br: #ef1923;
     --wiper: #4d4747;
+    --balck-bg: #000;
 }
 a {
     text-decoration: none;
@@ -80,7 +81,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     color: var(--body-back);
-    background: #010718;
+    background: var(--balck-bg);
     padding: 10px 15px;
     margin-right: 10px;
 }
@@ -88,7 +89,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     padding-right: 15px;
-    color: #010718;
+    color: var(--balck-bg);
     padding-top: 10px;
     text-align: center;
 }
@@ -135,6 +136,10 @@ body {
 .listing-heading {
     font-size: 48px;
 }
+.listing-filter-heading {
+    font-size: 24px;
+    color: var(--hading-all);
+}
 .number-listr {
     font-size: 24px;
     color: var(--top-br);
@@ -151,7 +156,7 @@ body {
     position: relative;
 }
 .card {
-    background: black;
+    background: var(--balck-bg);
     padding: 20px;
     border-radius: 10px;
     max-width: 340px;
@@ -256,7 +261,7 @@ body {
     justify-content: space-around;
 }
 .fixx-mod:hover {
-    background: black;
+    background: var(--balck-bg);
 }
 .car-mine-title {
     color: #d01818;
@@ -291,10 +296,10 @@ body {
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
-    border: 4px solid #000;
+    border: 4px solid var(--balck-bg);
     border-radius: 12px;
     background: white;
-    color: #000;
+    color: var(--balck-bg);
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
@@ -433,6 +438,12 @@ body {
 .on-weel {
     color: #d01818;
     /* font-size: 36px; */
+}
+
+/* Sticky filter on desktop */
+.sticky-filter {
+    position: sticky;
+    top: 140px;
 }
 
 /* Utility class keep them at the end of other code and before @media */
