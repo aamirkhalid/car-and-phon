@@ -17,6 +17,9 @@ body {
     padding: 0;
     overflow-x: hidden;
     background: #f1f1f1;
+} 
+.ovver{
+    overflow-x: hidden;
 }
 .top-on-nave {
     display: flex;
@@ -511,6 +514,49 @@ body {
 }
 
 @media (max-width: 790px) {
+    .background-image {
+       
+        padding: 0 10px;
+       
+    } 
+    .left-content {
+       
+        padding-left: 10px;
+        padding-top: 100px;
+    } 
+
+.hading {
+    font-size: 38px;
+   
+} 
+.number-listr {
+    font-size: 20px;
+   
+} 
+.desic {
+    font-size: 14px;
+   
+   padding-left: 0;
+} 
+img.img-fluid.car-top {
+    margin-top: -120px;
+} 
+.mr-poto{
+   
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+} 
+.rhop-op{
+    display: flex;
+    justify-content: space-around;
+} 
+.find-had {
+    font-size: 32px;
+   
+}
+    
 }
 @media (max-width: 576px) {
     .logo-top {
@@ -527,9 +573,45 @@ body {
     }
     .whtsoo {
         font-size: 16px;
-    }
+    } 
+    .find-had {
+        font-size:24px;
+       
+    } 
+    .find-sub {
+font-size: 16px;
+
+}
+
 }
 
 @media (max-width: 480px) {
+    img.img-fluid.car-top {
+        margin-top: -180px;
+    } 
+    .left-content {
+        
+        padding-top: 60px;
+    } 
+    .card {
+        background: var(--balck-bg);
+        padding:5px !important;
+        border-radius: 10px;
+        max-width: 200px;
+        position: absolute;
+        right: 10px;
+        bottom: -33px;
+    } 
+    .card-title {
+        font-size: 18px;
+    } 
+    .pric-top-car {
+       
+        font-size: 18px;
+    } 
+    .card-text {
+        font-size: 15px;
+    }
 }
+
 

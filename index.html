@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container ovver">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="/car-listing.html">Find your car by car brand</a>
@@ -116,7 +116,7 @@
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 6" :key="i">
-                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2" href="/car-listing.html">
+                    <a class="col-6 col-md-4 col-lg-4 col-xl-2 my-2 rhop-op" href="/car-listing.html">
                         <div class="cat-card gap-4 pt-5 h-100 bg-white rounded-1">
                             <img :src="`images/brands/${(i%2)+1}.png`" class="img-fluid cat-ime" alt="" />
                             <h6 class="catgory-km">Ford</h6>
@@ -125,14 +125,14 @@
                 </template>
             </div>
         </div>
-        <div class="container">
+        <div class="container ovver">
             <div class="row all-vihle">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="/car-listing.html">Trusted Car DeAler Service</a>
                     <h1 class="find-had">Explore all Vehicles</h1>
                 </div>
                 <template x-for="car in 4" :key="car">
-                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 mr-poto">
                         <a class="crt-well d-block overflow-hidden" href="/car-detail.html">
                             <div class="imger">
                                 <img :src="`images/cars/${car}.jpeg`" class="img-fluid price-car" alt="" />
@@ -164,7 +164,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ovver">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="/number-listing.html">Find your Phone Number All networks</a>
@@ -183,7 +183,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ovver">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="number-listing.html">Find your Phone Number All networks</a>
@@ -194,7 +194,7 @@
                 class="row card-section-main"
                 x-data="{getColor:(code)=> ['#25a9cf', '#78a22f', '#ed1737', 'black',][code % 4]}">
                 <template x-for="i in 8" :key="i">
-                    <a class="col-6 col-md-3 my-4" href="/number-detail.html">
+                    <a class="col-xl-6 col-lg-6  col-md-6 col-sm-12 col-12 my-4" href="/number-detail.html">
                         <div class="number-plate px-2">
                             <div class="number-plate-logo">
                                 <img :src="`images/phones/${(i%4)+1}.png`" alt="Logo" class="img-fluid max-w-60p" />
@@ -211,7 +211,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ovver">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="/listing.html">Find your License Plate All</a>
@@ -230,7 +230,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ovver">
             <div class="row pt-4">
                 <div class="col-12 cat-start">
                     <a class="find-sub" href="/listing.html">What kind of plate do you need?</a>
@@ -239,7 +239,7 @@
             </div>
             <div class="row card-section-main">
                 <template x-for="i in 8" :key="i">
-                    <a class="col-6 col-md-3 my-4" href="/license-detail.html">
+                    <a class="col-xl-6 col-lg-6  col-md-6 col-sm-12 col-12 my-4" href="/license-detail.html">
                         <div class="license-plate">
                             <div class="number-plate justify-content-around text-body">
                                 <div class="number-plate-content">
