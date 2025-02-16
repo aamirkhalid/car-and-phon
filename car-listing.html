@@ -124,13 +124,27 @@
             </div>
         </div>
 
-        <div class="container pt-5">
+        <div class="container pt-0 mt-0">
             <!-- Mobile Filter Button (visible only on mobile) -->
             <div class="container my-3">
-                <div class="row">
-                    <div class="offset-md-6 col-12 col-md-6 d-flex align-items-center justify-content-between">
-                        <div class="d-md-none">
-                            <label for="filter" class="form-label d-block">Filter</label>
+                <div class="row ">
+                    <h1 class="listing-filter-heading-mobile">
+                        Number plates for sale in Dubai / Number plates for sale in Abu Dhabi
+                    </h1>
+                    <div class=" col-8 mobile-sort">
+                        <label for="sortSelect" class="form-label">
+                            Sort
+                            <i class="bi bi-sort-down"></i>
+                        </label>
+                        <select id="sortSelect" class="form-select">
+                            <option selected>Choose...</option>
+                            <option value="1">khalid</option>
+                            <option value="2">kmas</option>
+                        </select>
+                    </div>
+                    <div class=" col-4 col-md-4 d-flex align-items-center justify-content-between">
+                        <div class="d-md-none ">
+                            <label for="filter" class="form-label d-block">Filter  <i class="bi bi-funnel"></i></label>
                             <button
                                 class="btn btn-primary"
                                 type="button"
@@ -146,29 +160,20 @@
 
             <!-- Main Content Section -->
             <div class="container mb-5">
-                <div class="row">
+                <div class="row"> 
+                   
                     <!-- Desktop Filters Column (hidden on mobile) -->
                     <div class="col-md-3 d-none d-md-block">
                         <div class="sticky-filter">
                             <form>
-                                <div class="py-3 border-bottom border-2">
-                                    <div class="mb-3">
-                                        <label for="sortSelect" class="form-label">
-                                            Sort
-                                            <i class="bi bi-sort-down"></i>
-                                        </label>
-                                        <select id="sortSelect" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                        </select>
-                                    </div>
-                                </div>
+                              
                                 <div class="py-3">
+                                    
                                     <h5>
                                         Filters
                                         <i class="bi bi-funnel"></i>
                                     </h5>
+                                   
                                     <div class="mb-3">
                                         <!-- <label for="filterSelect" class="form-label"></label> -->
                                         <select id="filterSelect" class="form-select">
@@ -217,15 +222,30 @@
 
                     <!-- Items Section -->
                     <div class="col-md-9">
-                        <div class="px-3 py-5">
+                        <div class="row ">
+                        <div class=" col-lg-10 col-md-10 col-sm-12 col-12 px-3 py-5 newadd-pd">
                             <h1 class="listing-filter-heading">
                                 Number plates for sale in Dubai / Number plates for sale in Abu Dhabi
                             </h1>
                         </div>
+                        <div class=" col-2 py-3 pt-5 border-bottom border-2 new-sorft">
+                            <div class="mb-3">
+                                <label for="sortSelect" class="form-label">
+                                   <h5 class="px-2">Sort
+                                    <i class="bi bi-sort-down"></i></h5> 
+                                </label>
+                                <select id="sortSelect" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option value="1">oplo</option>
+                                    <option value="2">kmas</option>
+                                </select>
+                            </div>
 
+                        </div>
+                    </div>
                         <div class="row card-section-main">
                             <template x-for="car in 30" :key="car">
-                                <div class="col-12 col-md-6 col-lg-4 py-2">
+                                <div class="col-12 col-md-6 col-lg-4 py-2 cat-start">
                                     <a class="crt-well d-block overflow-hidden" href="/car-detail.html">
                                         <div class="imger">
                                             <img
@@ -271,8 +291,8 @@
 
                         <template x-for="i in 10" :key="i">
                             <div class="py-3">
-                                <h3>Used Mercedes cars for sale in Dubai</h3>
-                                <p>
+                                <h3 class="usedt-tr">Used Mercedes cars for sale in Dubai</h3>
+                                <p class="desictr">
                                     Used Mercedes cars for sale in Dubai is one for the best Luxury cars brands in
                                     Dubai, Used Mercedes for sale in Dubai is one of the top-selling car in Dubai, and
                                     when we are talking about used Mercedes G class cars for sale in Dubai you can find
@@ -297,23 +317,54 @@
                 id="mobileFilters"
                 aria-labelledby="mobileFiltersLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters</h5>
+                    <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters  <i class="bi bi-funnel"></i></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <form>
-                        <div class="mb-3">
-                            <label for="mobileFilterSelect" class="form-label">Select</label>
-                            <select id="mobileFilterSelect" class="form-select">
-                                <option selected>Choose...</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                            </select>
+                       
+                            <div class="mb-3 mt-4">
+                                <!-- <label for="filterSelect" class="form-label"></label> -->
+                                <select id="filterSelect" class="form-select">
+                                    <option selected>Select City</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            
                         </div>
-                        <div class="mb-3">
-                            <label for="mobileFilterInput" class="form-label">Input</label>
-                            <input type="text" class="form-control" id="mobileFilterInput" placeholder="Enter value" />
-                        </div>
+
+                       <div class="mb-3 mt-4">
+                                        <!-- <label for="filterSelect" class="form-label"></label> -->
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Select Condition</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 mt-4">
+                                        <!-- <label for="filterSelect" class="form-label"></label> -->
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Select make</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 mt-4">
+                                        <!-- <label for="filterSelect" class="form-label"></label> -->
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Select Model</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 mt-4">
+                                        <!-- <label for="filterSelect" class="form-label"></label> -->
+                                        <select id="filterSelect" class="form-select">
+                                            <option selected>Select Color</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                        </select>
+                                    </div>
                         <button type="submit" class="btn btn-primary">Apply</button>
                     </form>
                 </div>

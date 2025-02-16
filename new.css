@@ -47,8 +47,7 @@ body {
 } /* Fixed navbar */
 
 .logo-top {
-    max-width: 140px;
-    height: 70px;
+   max-width: 22%;
 }
 .navbar {
     position: fixed;
@@ -332,7 +331,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: white;
-    background: gray;
+    background: black;
     padding: 2px 6px;
     border-radius: 3px;
     transform-origin: top center;
@@ -387,7 +386,7 @@ body {
 }
 
 .logo-bt {
-    max-width: 120px;
+   max-width: 20%;
 }
 .fotter-link {
     color: white;
@@ -412,7 +411,7 @@ body {
 .listing-bg {
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -499,7 +498,18 @@ body {
 .max-w-60p {
     max-width: 40px;
 }
+.mobile-sort{
+    display: none;
+} 
 
+.form-select:focus {
+    border-color:black;
+    outline: 0;
+    box-shadow: none;
+}
+.listing-filter-heading-mobile {
+    display: none;
+ }
 /* mobile responsive */
 @media (max-width: 996px) {
     .navbar > .container,
@@ -510,7 +520,13 @@ body {
     .navbar > .container-xl,
     .navbar > .container-xxl {
         background: var(--body-back);
-    }
+    } 
+    .listing-filter-heading {
+        font-size: 24px;
+        
+       
+    } 
+  
 }
 
 @media (max-width: 790px) {
@@ -555,12 +571,37 @@ img.img-fluid.car-top {
 .find-had {
     font-size: 32px;
    
+} 
+.new-sorft{
+    display: none;
 }
+.mobile-sort{
+    display: block;
+} 
+select#sortSelect {
+    max-width: 140px !important;
     
+}  
+
+ .listing-bg {
+   
+    height:65vh;
+   
+} 
+.listing-filter-heading {
+    display: none;
+    
+   
+}
+.listing-filter-heading-mobile {
+    font-size: 24px;
+    display: block;
+}
+ 
 }
 @media (max-width: 576px) {
     .logo-top {
-        max-width: 80px;
+        max-width: 50%;
     }
     .navbar {
         height: 60px;
@@ -581,8 +622,33 @@ img.img-fluid.car-top {
     .find-sub {
 font-size: 16px;
 
+} 
+.listing-iobg {
+padding: 5px 10px;
+
+} 
+.hading {
+    font-size: 30px;
+} 
+.listin-pag-to {
+    font-size: 18px;
+    
+} 
+.newadd-pd{
+    padding: 0 !important;
+} 
+.listing-filter-heading {
+    font-size: 22px;
+  padding: 5px 0px;
+} 
+.desictr{
+    font-size: 14px;
+} 
+.usedt-tr{
+    font-size: 18px;
 }
 
+  
 }
 
 @media (max-width: 480px) {
