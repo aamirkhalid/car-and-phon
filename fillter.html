@@ -123,10 +123,104 @@
                 </div>
             </div>
         </div>
-        
-
+        <div class="container py-2 filt-bg ">
+            <div class="col-md-12">
+                <div class="row">
+                    <form>
+                        <h5>
+                            Filters <i class="bi bi-funnel"></i>
+                        </h5>
+                        <div class="row">
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="cityFilter" class="form-select">
+                                    <option selected>Select City</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="conditionFilter" class="form-select">
+                                    <option selected>Select Condition</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="makeFilter" class="form-select">
+                                    <option selected>Select Make</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="modelFilter" class="form-select">
+                                    <option selected>Select Model</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="colorFilter" class="form-select">
+                                    <option selected>Select Color</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 mb-3">
+                                <select id="yearFilter" class="form-select">
+                                    <option selected>Select Year</option>
+                                    <option value="1">2023</option>
+                                    <option value="2">2024</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="text" class="form-control" placeholder="Enter Keyword">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="number" class="form-control" placeholder="Enter Price Min">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="number" class="form-control" placeholder="Enter Price Max">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="text" class="form-control" placeholder="Enter Location">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="text" class="form-control" placeholder="Enter Location">
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-2 mb-3">
+                                <input type="text" class="form-control" placeholder="Enter Location">
+                            </div>
+                            <div class="col-6 d-flex justify-content-center pt-2">
+                                <button type="submit" class="btn button-50 w-100 w-md-auto">Apply</button>
+                            </div>
+                            
+                            <div class=" col-6 sortyy d-flex justify-content-center pt-2">
+                                
+                                <div class="sortey">
+                                    <h5 class="px-2">Sort
+                                        <i class="bi bi-sort-down"></i></h5> 
+                                </div>
+                                    
+                                       
+                                  <div class="sorti">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="container pt-0 mt-0">
-            
+            <!-- Mobile Filter Button (visible only on mobile) -->
+        
               
 
             <!-- Main Content Section -->
@@ -140,25 +234,12 @@
                     <!-- Items Section -->
                     <div class="col-md-12">
                         <div class="row ">
-                        <div class=" col-lg-10 col-md-10 col-sm-12 col-12 px-3 py-5 newadd-pd">
+                        <div class=" col-lg-10 col-md-10 col-sm-10 col-10 px-3 py-5 newadd-pd">
                             <h1 class="listing-filter-heading">
                                 Number plates for sale in Dubai / Number plates for sale in Abu Dhabi
                             </h1>
                         </div>
-                        <div class=" col-2 py-3 pt-5 border-bottom border-2 new-sorft">
-                            <div class="mb-3">
-                                <label for="sortSelect" class="form-label">
-                                   <h5 class="px-2">Sort
-                                    <i class="bi bi-sort-down"></i></h5> 
-                                </label>
-                                <select id="sortSelect" class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option value="1">oplo</option>
-                                    <option value="2">kmas</option>
-                                </select>
-                            </div>
-
-                        </div>
+                       </div>
                     </div>
                         <div class="row card-section-main">
                             <template x-for="car in 30" :key="car">
@@ -228,64 +309,7 @@
             </div>
 
             <!-- Offcanvas Slide-Over for Mobile Filters -->
-            <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="mobileFilters"
-                aria-labelledby="mobileFiltersLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters  <i class="bi bi-funnel"></i></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <form>
-                       
-                            <div class="mb-3 mt-4">
-                                <!-- <label for="filterSelect" class="form-label"></label> -->
-                                <select id="filterSelect" class="form-select">
-                                    <option selected>Select City</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                </select>
-                            
-                        </div>
-
-                       <div class="mb-3 mt-4">
-                                        <!-- <label for="filterSelect" class="form-label"></label> -->
-                                        <select id="filterSelect" class="form-select">
-                                            <option selected>Select Condition</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3 mt-4">
-                                        <!-- <label for="filterSelect" class="form-label"></label> -->
-                                        <select id="filterSelect" class="form-select">
-                                            <option selected>Select make</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3 mt-4">
-                                        <!-- <label for="filterSelect" class="form-label"></label> -->
-                                        <select id="filterSelect" class="form-select">
-                                            <option selected>Select Model</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3 mt-4">
-                                        <!-- <label for="filterSelect" class="form-label"></label> -->
-                                        <select id="filterSelect" class="form-select">
-                                            <option selected>Select Color</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                        </select>
-                                    </div>
-                        <button type="submit" class="btn btn-primary">Apply</button>
-                    </form>
-                </div>
-            </div>
+          
         </div>
 
         <footer class="bg-listing text-center text-lg-start pt-9 mt-5">

@@ -399,13 +399,13 @@ body {
     padding-top: 80px;
 }
 .number-listing-bg {
-    background-image: url('network.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: url('network.jpg');
 }
 .car-listing-bg {
-    background-image: url('listing.png'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: url('listing.png');
 }
 .license-listing-bg {
-    background-image: url('number-plate.webp'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: url('number-plate.webp');
 }
 
 .listing-bg {
@@ -501,15 +501,98 @@ body {
 .mobile-sort{
     display: none;
 } 
-
+.form-select{
+    border: 1px solid;
+}
 .form-select:focus {
-    border-color:black;
+    border-color:rgb(221, 22, 22);
     outline: 0;
     box-shadow: none;
+    
 }
-.listing-filter-heading-mobile {
-    display: none;
+.filt-bg{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+ 
+}
+.form-control{
+    border: 1px solid;
+}
+.form-control:focus{
+    background: white;
+    box-shadow: 0 0 0 .25rem rgba(209, 23, 23, 0.5) !important;
+
+  outline: none;
+  border: none;
+}
+
+
+
+
+
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 8px ;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+  background-color: #000000;
+  color: #ef1923;
+  
+  
+}
+select{
+    background: #da0c0c;
+    border: 2px solid red;
  }
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+option{
+    background: white !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
 /* mobile responsive */
 @media (max-width: 996px) {
     .navbar > .container,
@@ -526,7 +609,12 @@ body {
         
        
     } 
-  
+    .form-select{
+        font-size: 12px;
+    }
+    .form-control{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 790px) {
@@ -572,27 +660,17 @@ img.img-fluid.car-top {
     font-size: 32px;
    
 } 
-.new-sorft{
-    display: none;
-}
+
 .mobile-sort{
     display: block;
 } 
-select#sortSelect {
-    max-width: 140px !important;
-    
-}  
 
  .listing-bg {
    
     height:65vh;
    
 } 
-.listing-filter-heading {
-    display: none;
-    
-   
-}
+
 .listing-filter-heading-mobile {
     font-size: 24px;
     display: block;
