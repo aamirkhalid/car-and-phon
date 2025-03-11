@@ -586,7 +586,116 @@ option{
     background: white !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+/* carmodeal page */
+.modal-lg {
+    width: 600px;
+    margin: auto;
+    background: #000;
+    border: transparent;
+  } 
+  .modal-content{
+    border: 2px solid red;
+  }
+.text-mut{
+    font-size: 16px;
+    color: #afadad;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
 
+ .car-style{
+    position: relative;
+   
+ }
+ .top-card-fix{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+ } 
+ .btm-card-fix{ 
+    position: absolute;
+    width:50%;
+    left: 25%;
+bottom: 0;
+ }
+.mod-bg-img{
+ position: fixed;
+left: 28%;
+  height: 42vh;
+}
+.social-share-btn {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.all-lo{
+   
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+   padding-left: 12px;
+   color: #000;
+   font-weight: 800;
+}
+
+.shear-op{
+    position: absolute;
+    top: 40px;
+    
+} 
+.number-fix{
+    position: absolute;
+   left:360px;
+   top: 228px;
+  
+}
+.number-klid-fd{
+    width: 64px;
+   
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(145, 135, 135); 
+    background: white; 
+
+    rotate: -2deg;
+}
+.btn-me-mod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e40404;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+} 
+.md-plyt{
+    
+   width: 16px;
+   padding: 2px;
+} 
+.md-englid{
+    font-size: 9px;
+    font-weight: 800;
+    color: black; 
+    text-align: justify;
+     margin: 0; 
+     padding: 3px;
+}
 @media (min-width: 768px) {
   .button-50 {
     padding: 12px 50px;

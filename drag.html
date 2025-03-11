@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Listings - MemorableTots</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #dropzone {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+
+        #draggable {
+            width: 100px;
+            height: 100px;
+            cursor: move;
+            position: absolute; /* Fix position after being dragged */
+        }
+
+        #downloadButton {
+            margin-top: 20px;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Vehicle Listings - MemorableTots</h1>
+    <p>Drag the image to position it on the drop zone below and then download the combined image.</p>
+
+    <!-- Drop Zone for Image Placement -->
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="draggable" src="car-cuy.png" draggable="true" ondragstart="drag(event)" />
+    </div>
+
+    <button id="downloadButton" class="btn btn-primary" onclick="downloadImage()">Download Image</button>
+
+    <canvas id="canvas"></canvas>
+</div>
+
+<script>
+    // Allow the drop event
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    // Start dragging the image
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    // Handle the image drop
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var draggableElement = document.getElementById(data);
+        var dropzone = document.getElementById("dropzone");
+
+        // Get mouse position to place the image
+        var offsetX = ev.clientX - dropzone.offsetLeft - draggableElement.width / 2;
+        var offsetY = ev.clientY - dropzone.offsetTop - draggableElement.height / 2;
+
+        // Ensure the image stays within the dropzone boundary
+        offsetX = Math.max(0, Math.min(dropzone.clientWidth - draggableElement.width, offsetX));
+        offsetY = Math.max(0, Math.min(dropzone.clientHeight - draggableElement.height, offsetY));
+
+        // Move the image to the drop position
+        draggableElement.style.left = offsetX + "px";
+        draggableElement.style.top = offsetY + "px";
+    }
+
+    // Download the image as a PNG
+    function downloadImage() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        var img1 = new Image();
+        img1.src = "https://via.placeholder.com/500"; // Static image URL (can be replaced)
+        img1.onload = function() {
+            var img2 = new Image();
+            img2.src = document.getElementById("draggable").src; // Draggable image
+
+            img2.onload = function() {
+                // Get the position of the draggable image
+                var draggableElement = document.getElementById("draggable");
+                var offsetX = parseInt(draggableElement.style.left || 0);
+                var offsetY = parseInt(draggableElement.style.top || 0);
+
+                // Set canvas size to accommodate both images
+                canvas.width = Math.max(img1.width, img2.width + offsetX);
+                canvas.height = Math.max(img1.height, img2.height + offsetY);
+
+                // Clear the canvas before drawing
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Draw both images on the canvas
+                context.drawImage(img1, 0, 0); // Static image
+                context.drawImage(img2, offsetX, offsetY); // Draggable image
+
+                // Download the combined image as PNG
+                var dataURL = canvas.toDataURL("image/png");
+
+                // Create a link to download the image
+                var link = document.createElement('a');
+                link.href = dataURL;
+                link.download = 'combined_image.png';
+                link.click(); // Trigger download
+            };
+        };
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
