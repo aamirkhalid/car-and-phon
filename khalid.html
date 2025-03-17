@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resizable and Rotatable Image with Sliders</title>
+        <style>
+            .dragme {
+                position: absolute;
+                width: 270px;
+                height: 203px;
+                cursor: move; /* Show move cursor when hovering over the image */
+                border: 1px solid #000;
+                transition: transform 0.1s ease; /* Smooth transition for rotation */
+            }
+
+            #widthSlider,
+            #heightSlider,
+            #rotationSlider {
+                margin-top: 20px;
+                width: 300px;
+            }
+
+            .container {
+                position: relative;
+                display: inline-block;
+            }
+
+            #draggable {
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                id="resizable"
+                src="https://lh4.googleusercontent.com/-8tqTFxi2ebU/Ufo4j_thf7I/AAAAAAAADFM/_ZBQctm9e8E/w270-h203-no/flower.jpg"
+                alt="drag-and-drop image script"
+                title="drag-and-drop image script"
+                class="dragme" />
+
+            <!-- Width Slider -->
+            <label for="widthSlider">Width:</label>
+            <input id="widthSlider" type="range" min="100" max="600" value="270" />
+
+            <!-- Height Slider -->
+            <label for="heightSlider">Height:</label>
+            <input id="heightSlider" type="range" min="50" max="450" value="203" />
+
+            <!-- Rotation Slider -->
+            <label for="rotationSlider">Rotation (degrees):</label>
+            <input id="rotationSlider" type="range" min="-180" max="180" value="0" />
+        </div>
+
+        <script>
+            let drag = false;
+            let offsetX, offsetY, coordX, coordY;
+
+            // Start dragging the image
+            function startDrag(e) {
+                if (!e) {
+                    e = window.event;
+                }
+                if (e.preventDefault) e.preventDefault();
+
+                const targ = e.target ? e.target : e.srcElement;
+
+                if (!targ.classList.contains('dragme')) {
+                    return;
+                }
+
+                // Calculate event X, Y coordinates
+                offsetX = e.clientX;
+                offsetY = e.clientY;
+
+                // Assign default values for top and left properties
+                if (!targ.style.left) {
+                    targ.style.left = '0px';
+                }
+                if (!targ.style.top) {
+                    targ.style.top = '0px';
+                }
+
+                coordX = parseInt(targ.style.left);
+                coordY = parseInt(targ.style.top);
+                drag = true;
+
+                document.onmousemove = dragDiv;
+                return false;
+            }
+
+            // Dragging the div element
+            function dragDiv(e) {
+                if (!drag) {
+                    return;
+                }
+                if (!e) {
+                    e = window.event;
+                }
+                const targ = e.target ? e.target : e.srcElement;
+
+                targ.style.left = coordX + e.clientX - offsetX + 'px';
+                targ.style.top = coordY + e.clientY - offsetY + 'px';
+                return false;
+            }
+
+            // Stop dragging the image
+            function stopDrag() {
+                drag = false;
+                document.onmousemove = null;
+            }
+
+            // Handle width slider change (resize image width)
+            const widthSlider = document.getElementById('widthSlider');
+            const resizableImage = document.getElementById('resizable');
+
+            widthSlider.addEventListener('input', function () {
+                const newWidth = widthSlider.value;
+                resizableImage.style.width = newWidth + 'px'; // Resize width
+            });
+
+            // Handle height slider change (resize image height)
+            const heightSlider = document.getElementById('heightSlider');
+
+            heightSlider.addEventListener('input', function () {
+                const newHeight = heightSlider.value;
+                resizableImage.style.height = newHeight + 'px'; // Resize height
+            });
+
+            // Handle rotation slider change (rotate image)
+            const rotationSlider = document.getElementById('rotationSlider');
+
+            rotationSlider.addEventListener('input', function () {
+                const rotationAngle = rotationSlider.value;
+                resizableImage.style.transform = `rotate(${rotationAngle}deg)`; // Apply rotation
+            });
+
+            window.onload = function () {
+                // Bind the mousedown event to drag the image
+                const draggableElements = document.querySelectorAll('.dragme');
+                draggableElements.forEach((element) => {
+                    element.onmousedown = startDrag;
+                });
+
+                document.onmouseup = stopDrag;
+            };
+        </script>
+    </body>
+</html>
+
